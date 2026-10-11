@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - fwh_resume_expanded.pdf
+      - fwh_resume.pdf
 
 permissions:
   contents: write
@@ -17,7 +17,7 @@ jobs:
       - name: Install poppler
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Render PDF to PNG
-        run: pdftocairo -png -r 200 -singlefile fwh_resume_expanded.pdf cv
+        run: pdftocairo -png -r 200 -singlefile fwh_resume.pdf cv
       - name: Commit preview if changed
         run: |
           git config user.name "github-actions[bot]"
