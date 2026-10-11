@@ -1,0 +1,125 @@
+% Compile with LuaLaTeX (needs the system Times New Roman font).
+\documentclass{article}
+\usepackage[letterpaper,left=30bp,right=30bp,top=31.35bp,bottom=17bp,nohead,nofoot]{geometry}
+\usepackage{fontspec}
+\usepackage{enumitem}
+\setmainfont{Times New Roman}[Ligatures={NoCommon,TeXOff}, Kerning=Off]
+
+\pagestyle{empty}
+\setlength{\parindent}{0bp}
+\setlength{\parskip}{0bp}
+\setlength{\topskip}{0bp}
+\setlength{\lineskip}{0bp}
+\setlength{\lineskiplimit}{-10bp}
+\raggedright
+\frenchspacing
+
+% Line pitches and the small \vspace nudges reproduce Word's single spacing for
+% Times New Roman; all lengths are in bp because Word's points are 1/72 in
+\newcommand{\eleven}{\fontsize{11bp}{12.66bp}\selectfont}
+\newcommand{\tenhalf}{\fontsize{10.5bp}{12bp}\selectfont}
+\newcommand{\twelve}{\fontsize{12bp}{13.76bp}\selectfont}
+
+\renewcommand{\section}[1]{\par{\twelve\centering\textbf{#1}\par}}
+
+% \entry[inset]{title}{date}: inset is how far the date ends left of the margin
+\newcommand{\entry}[3][0bp]{\par{\eleven\textbf{#2}\hfill#3\hspace*{#1}\par}}
+
+\newlist{bullets}{itemize}{1}
+\setlist[bullets]{label={\eleven●}, leftmargin=27bp, labelindent=13.5bp,
+  labelwidth=13.5bp, labelsep=0bp, align=left, topsep=0bp, partopsep=0bp,
+  itemsep=0bp, parsep=0bp}
+
+\begin{document}
+
+{\fontsize{21.5bp}{20.06bp}\selectfont\centering Fredrik Willumsen Haug\par}
+\vspace{5.44bp}
+{\tenhalf\centering fredrik\_willumsenhaug@college.harvard.edu | +1 (617) 413-4319\par}
+\vspace{2.68bp}
+\noindent\makebox[\linewidth][l]{\hspace*{0.375bp}\rule{552.7bp}{0.75bp}}\par
+\vspace{-2.08bp}
+
+\section{Education}
+{\eleven\textbf{HARVARD UNIVERSITY}\hfill{\tenhalf Cambridge, MA}\hspace*{2.98bp}\par}
+\vspace{0.25bp}{\tenhalf S.B. in Engineering Sciences, Bioengineering, Electrical and Computer Engineering (ECE) Track\hfill GPA 3.849/4.0\hfill May 2027\par}
+{\eleven\textbf{Relevant Coursework:} Bioengineering (ES53, ES91r, BE110, BE129, ES221, ES227), Electrical Engineering (ES50, ES152, ECE154*, ECE255*), Physics, Mathematics, Chemistry, Biology, Computer Science, Neuroscience. *Spring 2027.\par}
+{\eleven{\tenhalf\textbf{Skills}: }Programming: C/C++, MATLAB, Rust, Python, R, SQL, TypeScript; Circuit Design: LTspice, KiCad, Breadboard Layout; Tools \& Frameworks: Arduino, Raspberry Pi, Git, ImageJ, React, Supabase, Vercel; Laboratory: Cell Culture, Electrophoresis, PCR, Confocal Microscopy, Western Blot.\par}
+
+\section{Publications}
+{\eleven\textbf{POSTER PRESENTATION, HARVARD DATA SCIENCE INITIATIVE}\hfill{\tenhalf August 2026}\par}
+\begin{bullets}[label={\tenhalf●}]
+\item {\eleven ‘5xFAD Single Unit Encoding Analysis’ (first author) — presented at Harvard SPUDS poster session\par}
+\end{bullets}
+{\eleven\textbf{SCIENTIFIC PUBLICATION, FRONTIERS IN MEDICINE}\hfill{\tenhalf July 2025}\hspace*{2.55bp}\par}
+\begin{bullets}[label={\tenhalf●}]
+\item {\eleven ‘Potential source of bias in AI models: lactate measurement in the ICU in sepsis patients as a template’ (co-first author) — PubMed PMID: 40703300\par}
+\end{bullets}
+{\eleven\textbf{ABSTRACT PUBLICATION, AMERICAN THORACIC SOCIETY}\hfill{\tenhalf May 2024}\par}
+\begin{bullets}[label={\tenhalf●}]
+\item \vspace{0.25bp}{\tenhalf ‘Association of P50 With Physiologic Variables and Outcomes in Critically Ill Patients’ — DOI: 10.1164/ajrccm-conference.2024.209.1\_MeetingAbstracts.A2959\par}
+\end{bullets}
+{\tenhalf\textbf{OPINION ARTICLE, DAGENS MEDISIN}\hfill December 2023\par}
+\begin{bullets}[label={\tenhalf●}]
+\item {\tenhalf ‘Når kunstig intelligens diskriminerer’ (When Artificial Intelligence Discriminates) — Norwegian healthcare trade press\par}
+\end{bullets}
+
+\vspace{-0.26bp}\section{Research Experience}
+\entry{ENGINEERING SENIOR THESIS, HARVARD SEAS}{April 2026 - Now}
+\begin{bullets}
+\item {\eleven Designing a battery-powered wireless headstage for neural recordings in rodents (Intan RHD2164 analog front end, nRF54LM20B SoC, Bluetooth LE) that classifies spikes on-device and transmits only unit IDs and timestamps.\par}
+\item {\eleven Wrote hardware-timed acquisition firmware in C (timer-triggered SPI with DMA); designed host board PCB; validated the chain end-to-end against a neural simulator with lossless packet transmission and detection of ground-truth spikes.\par}
+\end{bullets}
+\entry{INDEPENDENT RESEARCH, HARVARD BIOELECTRONICS GROUP}{September 2025 - August 2026}
+\begin{bullets}
+\item {\eleven Ran neural recording experiments in 5xFAD Alzheimer mice with subsequent spike-sorting analysis.\par}
+\item {\eleven HDSI Research Fellow (summer 2026); analyzed neural representations; built probe drift-correction pipeline.\par}
+\end{bullets}
+\entry[1.10bp]{CLINICAL MACHINE LEARNING RESEARCH, MIT IMES}{September 2022 - September 2024}
+\begin{bullets}
+\item {\eleven Co-designed study on bias in clinical AI using the MIMIC dataset; earned co-first authorship on the publication.\par}
+\item {\eleven Developed open-source PyPI package (care-phenotype-analyzer) for healthcare fairness evaluation.\par}
+\end{bullets}
+\entry[3.55bp]{BIOENGINEERING INTERN, ROCHE}{May 2024 - August 2024}
+\begin{bullets}
+\item {\eleven Initiated and maintained microglia cell cultures for Alzheimer's disease research; conducted imaging and data analysis.\par}
+\end{bullets}
+
+\section{Technical Experience and Teaching}
+\entry{SOFTWARE ENGINEERING, FSN CAPITAL}{September 2024 - August 2025}
+\begin{bullets}
+\item {\eleven Worked as a software engineer in private equity during a college gap year; built a Monte Carlo ROI-distribution model.\par}
+\item {\eleven Co-developed full-stack app used by FSN's investment professionals to present deals to the investment committee.\par}
+\end{bullets}
+\entry{TEACHING ASSISTANT (ECE152), HARVARD SEAS}{September 2026 - Now}
+\begin{bullets}
+\item {\eleven Hold five hours of problem-solving sessions per week helping students with analog circuit analysis.\par}
+\end{bullets}
+\entry{TEACHING ASSISTANT (BST209), HARVARD SCHOOL OF PUBLIC HEALTH}{August 2023}
+\begin{bullets}
+\item {\eleven Presented a lecture on ensemble models and decision trees; held office hours for statistics and machine learning.\par}
+\end{bullets}
+
+\section{Projects}
+\entry{MULTIMODAL GASTROINTESTINAL SENSOR (ES227 Capstone)}{Spring 2026}
+\begin{bullets}
+\item {\eleven Electrical engineering lead on team building a multimodal intragastric sensor recording mucosal electrophysiology, contractility strain, intraluminal pressure, and VOC gas composition.\par}
+\item {\eleven Designed strain-gauge/AD623 analog front end with Teensy logger; validated in-vivo slow-wave detection.\par}
+\end{bullets}
+\entry[0.54bp]{REAL-TIME BCI SIGNAL PROCESSING LIBRARY (Personal Project)}{December 2025 - Now}
+\begin{bullets}
+\item {\eleven Developing open-source Rust library for BCI signal processing focused on memory safety and real-time performance.\par}
+\end{bullets}
+\entry{AI-POWERED BIOTECH EQUITY RESEARCH PLATFORM (CS1060 Capstone)}{Fall 2025}
+\begin{bullets}
+\item {\eleven Built full-stack platform aggregating ClinicalTrials.gov and PubMed data with AI-driven buy/sell signal detection.\par}
+\end{bullets}
+\entry{EMG-CONTROLLED ROBOT (ES50 Capstone)}{Spring 2024}
+\begin{bullets}
+\item {\eleven Built wireless robot driven by EMG biosignals via Arduino Cloud IoT with H-bridge PWM motor control.\par}
+\end{bullets}
+\entry{LOCATION-BASED SOCIAL MAP (CS50 Capstone)}{Spring 2023}
+\begin{bullets}
+\item {\eleven Co-built Flask/SQLite social map with live location sharing, activity labels, events, and privacy-first design.\par}
+\end{bullets}
+
+\end{document}
