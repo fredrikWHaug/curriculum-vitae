@@ -1,9 +1,3 @@
-# Fredrik Willumsen Haug — Curriculum Vitae
+<p align="center"><b><a href="https://github.com/fredrikWHaug/curriculum-vitae/raw/main/fwh_resume_expanded.pdf">Download PDF</a></b></p>
 
-**[Download PDF](fwh_resume_expanded.pdf)**
-
-![Curriculum Vitae](cv.png)
-
----
-
-Built from [`fwh_resume_expanded.tex`](fwh_resume_expanded.tex) with `lualatex` (requires the system Times New Roman font). The preview image regenerates automatically via GitHub Actions whenever the PDF changes.
+<p align="center"><img src="cv.png" alt="Curriculum Vitae"></p>
